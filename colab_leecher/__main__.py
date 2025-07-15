@@ -1,4 +1,20 @@
 # copyright 2024 © Xron Trix | https://github.com/Xrontrix10
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "running"
+
+def run_flask():
+    app.run(host='0.0.0.0', port=7860)
+
+flask_thread = threading.Thread(target=run_flask, daemon=True)
+flask_thread.start()
+
+
 
 
 import logging, os
