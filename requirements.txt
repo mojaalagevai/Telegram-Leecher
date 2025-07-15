@@ -18,4 +18,4 @@ yt_dlp
 pymegatools
 flask
 setuptools
-distutils
+
